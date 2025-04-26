@@ -1,0 +1,36 @@
+{% extends 'beomanagement/base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4" style="color:#451d1d;">Our Clients</h2>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle" >
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for client in clients %}
+                    <tr>
+                        <td>{{ client.first_name }} {{ client.last_name }}</td>
+                        <td>{{ client.email }}</td>
+                        <td>{{ client.phone }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3" class="text-center text-dark">No clients found.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn" style="color:#c5ba8d; background-color: #451d1d;">Back to Home</a>
+    </div>
+</div>
+{% endblock content %}

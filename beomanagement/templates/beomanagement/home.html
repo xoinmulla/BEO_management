@@ -1,0 +1,67 @@
+{% extends 'beomanagement/base.html' %}
+
+{% block content %}
+<div class="text-center my-5">
+    <h2 class="display-5 fw-bold  mb-4" style="color:#451d1d ;">Welcome to the BEO Management System</h2>
+    <p class="lead mb-4" style="color:#451d1d ;">
+        Seamlessly manage your <strong>Clients</strong>, <strong>Venues</strong>, <strong>Events</strong>, and <strong>Services</strong> — all in one place with efficiency and ease.
+    </p>
+    <a href="{% url 'client_list' %}" class="btn btn-lg me-2" style="color:#c5ba8d; background-color: #451d1d;">Get Started</a>
+    <a href="{% url 'service_list' %}" class="btn btn-outline-dark btn-lg">View Services</a>
+</div>
+
+<!-- About Section -->
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <img src="https://i.pinimg.com/736x/a7/55/0c/a7550c070638e3f2fedbc0c8df69cf7e.jpg" class="img-fluid rounded shadow" alt="BEO Management">
+        </div>
+        <div class="col-md-6">
+            <h3 class="fw-bold  mb-3" style="color:#451d1d ;">About the BEO Management System</h3>
+            <p class="text-muted">
+                The <strong>BEO (Banquet Event Order) Management System</strong> is designed to streamline and optimize the management of events, venues, clients, and services. 
+                Whether you are coordinating a small gathering or a large-scale event, BEO ensures every detail is organized and accessible.
+            </p>
+            <ul class="list-unstyled text-muted">
+                <li>✔️ Centralized client and venue database</li>
+                <li>✔️ Seamless event scheduling and tracking</li>
+                <li>✔️ Integrated service management</li>
+                <li>✔️ Responsive and user-friendly interface</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features Section -->
+<section class=" py-5" style="background-color:#451d1d ;">
+    <div class="container">
+        <h3 class="text-center fw-bold mb-5" style="color:#c5ba8d ;">Key Features</h3>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-dark" style="background-color:#c5ba8d;">
+                    <div class="card-body">
+                        <h5 class="card-title">Client Management</h5>
+                        <p class="card-text">Easily add, edit, and track client details and communications in one place.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-dark" style="background-color:#c5ba8d;">
+                    <div class="card-body">
+                        <h5 class="card-title">Venue Booking</h5>
+                        <p class="card-text">Manage venue availability, capacities, and event schedules with real-time updates.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-dark" style="background-color:#c5ba8d;">
+                    <div class="card-body">
+                        <h5 class="card-title">Event Planning</h5>
+                        <p class="card-text">Stay on top of every event with task lists, timelines, and service coordination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
